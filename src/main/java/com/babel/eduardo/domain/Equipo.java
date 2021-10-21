@@ -1,9 +1,11 @@
 package com.babel.eduardo.domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,17 +13,20 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@EqualsAndHashCode
-@Table
 @Entity
+@EqualsAndHashCode
 public class Equipo {
 
-	private String nombre;
-	private String ciudad;
-	private String propietario;
-	private int capacidadEstadio;
-	private String división;
-	private String competición;
-	private int jugadores;
-	private LocalDateTime fechaCreación;
+    @Id
+    @EqualsAndHashCode.Exclude
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombre;
+    private String ciudad;
+    private String propietario;
+    private Integer capacidadEstadio;
+    private String division;
+    private String competicion;
+    private Integer jugadores;
+    private LocalDate fechaCreacion;
 }
