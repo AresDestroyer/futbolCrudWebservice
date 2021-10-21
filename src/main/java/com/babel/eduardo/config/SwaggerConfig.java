@@ -13,11 +13,10 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 public class SwaggerConfig {
 
-	@Bean
-	public Docket swaggerApi(TypeResolver typeResolver) {
-		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors
-						.basePackage("com.babel.eduardo.controller"))
-				.paths(PathSelectors.any()).build();
-	}
+    @Bean
+    public Docket swaggerApi(TypeResolver typeResolver) {
+	return new Docket(DocumentationType.SWAGGER_2).select()
+		.apis(RequestHandlerSelectors.basePackage("com.babel.eduardo.controller")).paths(PathSelectors.any())
+		.build();
+    }
 }
