@@ -16,6 +16,7 @@
 	<properties>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<swagger.version>[3, 4)</swagger.version>
+		<binding.version>0.2.0</binding.version>
 	</properties>
 
 	<dependencies>
@@ -62,7 +63,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
-							<version>${lombok.mapstruct.binding.version}</version>
+							<version>${binding.version}</version>
 						</path>
 						<path>
 							<groupId>org.projectlombok</groupId>
